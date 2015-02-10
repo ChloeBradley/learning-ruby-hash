@@ -15,7 +15,6 @@ class LearningHash
     result = ''
       hash.each_key do |key|
         result << key.to_s
-        h.each
       end
       return result
     end
@@ -42,8 +41,22 @@ class LearningHash
       end
       result
     end
+
+    def reversed_key_and_value_stringer(hash)
+      key_and_value_stringer(hash).reverse
   end
-  
+
+
+
+  def polite_is_empty(hash)
+    if hash.empty?
+      "Yes ma'am"
+    else
+      "No ma'am"
+    end
+  end
+
+
 
     # hint see http://ruby-doc.org/core-2.1.5/Hash.html#method-i-each_key
   end
